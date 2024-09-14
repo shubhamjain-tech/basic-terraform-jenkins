@@ -7,7 +7,3 @@ terraform {
   }
 }
 
-provider "aws" {
-  region  = "ap-south-1"
-  profile = "myprofile"  # Ensure that 'myprofile' is the correct profile name configured via AWS CLI
-}
