@@ -5,7 +5,13 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
   }
+
+  lifecycle {
+    create_before_destroy = false
+    prevent_destroy       = true
+  }
 }
+
 
 resource "aws_s3_bucket" "example" {
   bucket = "jenkins-with-terraform-2024-09-16"
